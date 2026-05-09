@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #0B0F1A;
+  color: #EAEAEA;
+}
+
+.mars-planet {
+  position: fixed;
+  width: 180px;
+  top: 20px;
+  left: 20px;
+  border-radius: 50%;
+  box-shadow: 
+    0 0 30px rgba(255,120,60,0.8),
+    0 0 60px rgba(255,80,0,0.5);
+  animation: rotateMars 20s linear infinite;
+}
+
+@keyframes rotateMars {
+
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateMars {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+h1, h2 {
+  font-family: 'Orbitron', sans-serif;
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url('img1.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 56px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+.btn {
+  padding: 12px 24px;
+  margin: 5px;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.primary {
+  background: #C1440E;
+  color: #fff;
+}
+
+.primary:hover {
+  background: #F4A261;
+}
+
+.secondary {
+  border: 1px solid #EAEAEA;
+  color: #EAEAEA;
+}
+
+.secondary:hover {
+  background: #EAEAEA;
+  color: #000;
+}
+
+.section {
+  padding: 80px 10%;
+}
+
+.two-col {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.two-col.reverse {
+  flex-direction: row-reverse;
+}
+
+.text {
+  flex: 1;
+}
+
+.image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.cards {
+  text-align: center;
+}
+
+.card-grid {
+  display: flex;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.card {
+  flex: 1;
+  padding: 40px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  background: white;
+  color: black;
+  border: black;
+  font-size: 18px;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #05070d;
+}
+
+@media (max-width: 900px) {
+  .two-col {
+    flex-direction: column;
+  }
+
+  .card-grid {
+    flex-direction: column;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+}
